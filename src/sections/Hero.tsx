@@ -1,10 +1,12 @@
 import Image from 'next/image';
-import ArrowDown from '@/assets/icons/arrow-down.svg';
 import images from '@/assets/images';
+import ArrowDown from '@/assets/icons/arrow-down.svg';
+import StarIcon from '@/assets/icons/star.svg';
+import { HeroOrbit } from '@/components/HeroOrbit';
 
 export const HeroSection = () => {
   return (
-    <div className='py-32 md:py-48 lg:py-60 relative z-0'>
+    <div className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip'>
       {/* Grain Image background */}
       <div
         className='absolute inset-0 -z-10 opacity-5'
@@ -13,11 +15,40 @@ export const HeroSection = () => {
         }}
       ></div>
 
-      {/* Circle background */}
+      {/* Rings background */}
       <div className='size-[620px] hero-ring'></div>
       <div className='size-[820px] hero-ring'></div>
       <div className='size-[1020px] hero-ring'></div>
       <div className='size-[1220px] hero-ring'></div>
+
+      {/* Hero orbit with Star icon */}
+      <HeroOrbit size={800} rotation={-72}>
+        <StarIcon className='size-28 text-emerald-300' />
+      </HeroOrbit>
+
+      <HeroOrbit size={550} rotation={20}>
+        <StarIcon className='size-12 text-emerald-300' />
+      </HeroOrbit>
+
+      <HeroOrbit size={590} rotation={98}>
+        <StarIcon className='size-8 text-emerald-300' />
+      </HeroOrbit>
+
+      <HeroOrbit size={430} rotation={-14}>
+        <StarIcon className='size-8 text-emerald-300/20' />
+      </HeroOrbit>
+
+      <HeroOrbit size={440} rotation={79}>
+        <StarIcon className='size-5 text-emerald-300/20' />
+      </HeroOrbit>
+
+      <HeroOrbit size={530} rotation={178}>
+        <StarIcon className='size-10 text-emerald-300/20' />
+      </HeroOrbit>
+
+      <HeroOrbit size={710} rotation={144}>
+        <StarIcon className='size-14 text-emerald-300/20' />
+      </HeroOrbit>
 
       {/* Hero container */}
       <div className='container'>
