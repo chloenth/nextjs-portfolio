@@ -1,7 +1,11 @@
 import Image from 'next/image';
+
 import images from '@/assets/images';
+
 import ArrowDown from '@/assets/icons/arrow-down.svg';
 import StarIcon from '@/assets/icons/star.svg';
+import SparkleIcon from '@/assets/icons/sparkle.svg';
+
 import { HeroOrbit } from '@/components/HeroOrbit';
 
 export const HeroSection = () => {
@@ -34,20 +38,34 @@ export const HeroSection = () => {
         <StarIcon className='size-8 text-emerald-300' />
       </HeroOrbit>
 
+      {/* Hero orbit with Sparkle icon */}
       <HeroOrbit size={430} rotation={-14}>
-        <StarIcon className='size-8 text-emerald-300/20' />
+        <SparkleIcon className='size-8 text-emerald-300/20' />
       </HeroOrbit>
 
       <HeroOrbit size={440} rotation={79}>
-        <StarIcon className='size-5 text-emerald-300/20' />
+        <SparkleIcon className='size-5 text-emerald-300/20' />
       </HeroOrbit>
 
       <HeroOrbit size={530} rotation={178}>
-        <StarIcon className='size-10 text-emerald-300/20' />
+        <SparkleIcon className='size-10 text-emerald-300/20' />
       </HeroOrbit>
 
       <HeroOrbit size={710} rotation={144}>
-        <StarIcon className='size-14 text-emerald-300/20' />
+        <SparkleIcon className='size-14 text-emerald-300/20' />
+      </HeroOrbit>
+
+      {/* Hero orbit with circle */}
+      <HeroOrbit size={720} rotation={85}>
+        <div className='size-3 rounded-full bg-emerald-300/20'></div>
+      </HeroOrbit>
+
+      <HeroOrbit size={520} rotation={-41}>
+        <div className='size-2 rounded-full bg-emerald-300/20'></div>
+      </HeroOrbit>
+
+      <HeroOrbit size={650} rotation={-5}>
+        <div className='size-2 rounded-full bg-emerald-300/20'></div>
       </HeroOrbit>
 
       {/* Hero container */}
