@@ -4,6 +4,7 @@ import images from '@/assets/images';
 import CheckCircleIcon from '@/assets/icons/check-circle.svg';
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
 import { SectionHeader } from '@/components/SectionHeader';
+import { Card } from '@/components/Card';
 
 const portfolioProjects = [
   {
@@ -59,16 +60,10 @@ export const ProjectsSection = () => {
         <div className='flex flex-col mt-10 md:mt-20 gap-20'>
           {/* Project Card */}
           {portfolioProjects.map((project) => (
-            <div
+            <Card
               key={project.title}
-              className='bg-gray-800 rounded-3xl outline outline-offset-1 outline-white/20 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 overflow-hidden relative'
+              className='px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20'
             >
-              {/* Grain background - Project Card */}
-              <div
-                className='absolute inset-0 -z-10 opacity-5'
-                style={{ backgroundImage: `url(${images.grainImage})` }}
-              ></div>
-
               {/* Grid layout on lg screen - Project Card */}
               <div className='lg:grid lg:grid-cols-2 lg:gap-16'>
                 {/* First column of Grid layout on lg screen - Project Card */}
@@ -117,7 +112,7 @@ export const ProjectsSection = () => {
                   />
                 </div>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>

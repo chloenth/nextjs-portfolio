@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import images from '@/assets/images';
 import { SectionHeader } from '@/components/SectionHeader';
+import { Card } from '@/components/Card';
 
 const testimonials = [
   {
@@ -50,14 +51,7 @@ export const TestimonialsSection = () => {
         {/* Testimonials */}
         <div>
           {testimonials.map((testimonial) => (
-            <div
-              key={testimonial.name}
-              className='bg-gray-800 rounded-3xl p-6 relative z-0'
-            >
-              <div
-                className='absolute inset-0 opacity-5 -z-10'
-                style={{ backgroundImage: `url(${images.grainImage})` }}
-              ></div>
+            <Card key={testimonial.name}>
               <Image
                 src={testimonial.avatar}
                 alt={testimonial.name}
@@ -68,7 +62,7 @@ export const TestimonialsSection = () => {
               <div>{testimonial.name}</div>
               <div>{testimonial.position}</div>
               <p>{testimonial.text}</p>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
