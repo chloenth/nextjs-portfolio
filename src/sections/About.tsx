@@ -47,34 +47,44 @@ const hobbies = [
   {
     title: 'Painting',
     emoji: '🎨',
+    left: '5%',
+    top: '5%',
   },
   {
     title: 'Photography',
     emoji: '📸',
-  },
-  {
-    title: 'Gaming',
-    emoji: '🎮',
+    left: '50%',
+    top: '5%',
   },
   {
     title: 'Hiking',
     emoji: '🥾',
+    left: '42%',
+    top: '42%',
   },
   {
-    title: 'Photography',
-    emoji: '📷',
+    title: 'Gaming',
+    emoji: '🎮',
+    left: '8%',
+    top: '32%',
   },
   {
     title: 'Music',
     emoji: '🎵',
+    left: '70%',
+    top: '45%',
   },
   {
     title: 'Fitness',
     emoji: '🏋️‍♀️',
+    left: '5%',
+    top: '65%',
   },
   {
     title: 'Reading',
     emoji: '📚',
+    left: '45%',
+    top: '70%',
   },
 ];
 
@@ -127,17 +137,24 @@ export const AboutSection = () => {
             />
           </Card>
 
-          {/* Beyond the Code */}
-          <Card>
+          {/* Beyond the Code - Hobbies Card */}
+          <Card className='h-[320px] p-0 flex flex-col'>
             <CardHeader
               title='Beyond the Code'
               description='Explore my interests and hobbies beyond the digital realm.'
+              className='px-6 py-6'
             />
 
-            <div>
+            <div className='relative flex-1'>
               {hobbies.map((hobby) => (
-                <div key={hobby.title}>
-                  <span>{hobby.title}</span>
+                <div
+                  key={hobby.title}
+                  className='inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute'
+                  style={{ left: hobby.left, top: hobby.top }}
+                >
+                  <span className='font-medium text-gray-950'>
+                    {hobby.title}
+                  </span>
                   <span>{hobby.emoji}</span>
                 </div>
               ))}
