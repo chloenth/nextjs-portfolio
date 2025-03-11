@@ -90,7 +90,7 @@ const hobbies = [
 
 export const AboutSection = () => {
   return (
-    <div className='pb-20'>
+    <div className='pb-20 lg:py-28'>
       <div className='container'>
         {/* Section Header */}
         <SectionHeader
@@ -101,9 +101,9 @@ export const AboutSection = () => {
 
         {/* About Info */}
         <div className='mt-20 flex flex-col gap-8'>
-          <div className='grid grid-cols-1 gap-8 md:grid md:grid-cols-5'>
+          <div className='grid grid-cols-1 gap-8 md:grid md:grid-cols-5 lg:grid-cols-3'>
             {/* My Reads card */}
-            <Card className='h-[320px] md:col-span-2'>
+            <Card className='h-[320px] md:col-span-2 lg:col-span-1'>
               <CardHeader
                 title='My Reads'
                 description='Explore the books shaping my perspectives.'
@@ -121,7 +121,7 @@ export const AboutSection = () => {
             </Card>
 
             {/* Toolbox card */}
-            <Card className='h-[320px] md:col-span-3'>
+            <Card className='h-[320px] md:col-span-3 lg:col-span-2'>
               <CardHeader
                 title='My Toolbox'
                 description='Explore the technologies and tools I use to craft exceptional
@@ -138,9 +138,9 @@ export const AboutSection = () => {
             </Card>
           </div>
 
-          <div className='grid grid-cols-1 md:grid-cols-5 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-5 gap-8 lg:grid-cols-3'>
             {/* Beyond the Code - Hobbies Card */}
-            <Card className='h-[320px] p-0 flex flex-col col-span-3'>
+            <Card className='h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2'>
               <CardHeader
                 title='Beyond the Code'
                 description='Explore my interests and hobbies beyond the digital realm.'
@@ -164,7 +164,7 @@ export const AboutSection = () => {
             </Card>
 
             {/* Map */}
-            <Card className='h-[320px] p-0 relative col-span-2'>
+            <Card className='h-[320px] p-0 relative md:col-span-2 lg:col-span-1'>
               <Image
                 src={images.mapImage}
                 alt='map'
