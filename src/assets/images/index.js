@@ -19,6 +19,12 @@ const images = {
     'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741657184/memoji-avatar-4_h4jc4c.png',
   memojiAvatar5:
     'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741657183/memoji-avatar-5_qfpwga.png',
+  bookImage:
+    'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741664790/book-cover_rmwtev.png',
+  mapImage:
+    'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741669504/map_wxsy0n.png',
+  smileMemoji:
+    'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741669665/memoji-smile_sdw226.png',
 };
 
 export default images;
