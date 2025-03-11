@@ -9,6 +9,16 @@ const images = {
     'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741525055/light-saas-landing-page_whzxso.png',
   aiStartupLandingPage:
     'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741525105/ai-startup-landing-page_wzddos.png',
+  memojiAvatar1:
+    'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741657181/memoji-avatar-1_dwcubq.png',
+  memojiAvatar2:
+    'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741657180/memoji-avatar-2_an9ndf.png',
+  memojiAvatar3:
+    'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741657180/memoji-avatar-3_js40fi.png',
+  memojiAvatar4:
+    'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741657184/memoji-avatar-4_h4jc4c.png',
+  memojiAvatar5:
+    'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741657183/memoji-avatar-5_qfpwga.png',
 };
 
 export default images;
