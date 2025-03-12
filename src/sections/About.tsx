@@ -93,7 +93,7 @@ export const AboutSection = () => {
   const constraintRef = useRef(null);
 
   return (
-    <div className='pb-20 lg:py-28'>
+    <section id='about' className='pb-20 lg:py-28'>
       <div className='container'>
         {/* Section Header */}
         <SectionHeader
@@ -196,6 +196,6 @@ export const AboutSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

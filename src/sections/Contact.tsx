@@ -3,7 +3,7 @@ import images from '@/assets/images';
 
 export const ContactSection = () => {
   return (
-    <div className='py-16 pt-12 lg:py-24 lg:pt-20'>
+    <section id='contact' className='py-16 pt-12 lg:py-24 lg:pt-20'>
       <div className='container'>
         <div className='bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10 rounded-3xl text-center md:text-left relative z-0 overflow-hidden'>
           {/* Grain Image background */}
@@ -34,6 +34,6 @@ export const ContactSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
