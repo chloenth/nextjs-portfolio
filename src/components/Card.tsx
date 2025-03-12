@@ -1,17 +1,19 @@
 import images from '@/assets/images';
-import { PropsWithChildren } from 'react';
+import { ComponentPropsWithoutRef, PropsWithChildren } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 export const Card = ({
   className,
   children,
-}: PropsWithChildren<{ className?: string }>) => {
+  ...other
+}: ComponentPropsWithoutRef<'div'>) => {
   return (
     <div
       className={twMerge(
         'bg-gray-800 rounded-3xl outline outline-offset-1 outline-white/20 overflow-hidden relative z-0',
         className
       )}
+      {...other}
     >
       {/* Grain background - Card */}
       <div
