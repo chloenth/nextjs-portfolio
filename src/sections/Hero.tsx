@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import images from '@/assets/images';
 
@@ -7,6 +8,8 @@ import StarIcon from '@/assets/icons/star.svg';
 import SparkleIcon from '@/assets/icons/sparkle.svg';
 
 import { HeroOrbit } from '@/components/HeroOrbit';
+
+import { ScrollLink } from '@/components/ScrollLink';
 
 export const HeroSection = () => {
   return (
@@ -124,7 +127,7 @@ export const HeroSection = () => {
       </div>
 
       {/* Hero container */}
-      <div className='container'>
+      <div className='container relative z-20'>
         {/* Banner */}
         <div className='flex flex-col items-center'>
           <Image
@@ -159,12 +162,16 @@ export const HeroSection = () => {
 
         {/* Action buttons */}
         <div className='flex flex-col md:flex-row justify-center items-center mt-8 gap-4'>
-          <button className='inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl'>
+          <ScrollLink
+            sectionId='projects'
+            href='#projects'
+            className='inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl'
+          >
             <span className='font-semibold'>Explore My Work</span>
             <div>
               <ArrowDown className='size-4' />
             </div>
-          </button>
+          </ScrollLink>
 
           <button className='inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl'>
             <span>👋</span>
