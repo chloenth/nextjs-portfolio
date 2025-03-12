@@ -22,7 +22,7 @@ const images = {
   bookImage:
     'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741664790/book-cover_rmwtev.png',
   mapImage:
-    'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741669504/map_wxsy0n.png',
+    'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741776576/map-helsinki_tblyug.gif',
   smileMemoji:
     'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741669665/memoji-smile_sdw226.png',
 };

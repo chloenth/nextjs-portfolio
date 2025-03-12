@@ -1,5 +1,6 @@
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg';
 import images from '@/assets/images';
+import Link from 'next/link';
 
 export const ContactSection = () => {
   return (
@@ -26,10 +27,13 @@ export const ContactSection = () => {
             </div>
 
             <div>
-              <button className='text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900'>
+              <Link
+                href='mailto:chloe.huongnth@gmail.com?subject=Contact%20Regarding%20Your%20Work&body=Hello,%20I%20would%20like%20to%20reach%20out...'
+                className='text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900'
+              >
                 <span className='font-semibold'>Contact Me</span>
                 <ArrowUpRightIcon className='size-4' />
-              </button>
+              </Link>
             </div>
           </div>
         </div>

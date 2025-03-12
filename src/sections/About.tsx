@@ -12,8 +12,11 @@ import JavascriptIcon from '@/assets/icons/square-js.svg';
 import HTMLIcon from '@/assets/icons/html5.svg';
 import CssIcon from '@/assets/icons/css3.svg';
 import ReactIcon from '@/assets/icons/react.svg';
-import ChromeIcon from '@/assets/icons/chrome.svg';
 import GithubIcon from '@/assets/icons/github.svg';
+import TypeScriptIcon from '@/assets/icons/typescript.svg';
+import NextJsIcon from '@/assets/icons/nextjs.svg';
+import JavaIcon from '@/assets/icons/java.svg';
+
 import { CardHeader } from '@/components/CardHeader';
 import { ToolBoxItems } from '@/components/ToolboxItems';
 
@@ -35,12 +38,20 @@ const toolBoxItems = [
     iconType: ReactIcon,
   },
   {
-    title: 'Chrome',
-    iconType: ChromeIcon,
+    title: 'NextJS',
+    iconType: NextJsIcon,
   },
   {
     title: 'Github',
     iconType: GithubIcon,
+  },
+  {
+    title: 'TypeScript',
+    iconType: TypeScriptIcon,
+  },
+  {
+    title: 'Java',
+    iconType: JavaIcon,
   },
 ];
 
@@ -178,7 +189,7 @@ export const AboutSection = () => {
                 alt='map'
                 width={300}
                 height={300}
-                className='h-full w-full object-cover object-left-top'
+                className='h-full w-full object-cover object-bottom'
               />
 
               <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 outline outline-2 -outline-offset-2 outline-gray-950/30'>
