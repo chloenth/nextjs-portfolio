@@ -25,6 +25,10 @@ const images = {
     'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741776576/map-helsinki_tblyug.gif',
   smileMemoji:
     'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741669665/memoji-smile_sdw226.png',
+  smartBrainProject:
+    'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741846337/smart-brain_b3c08i.png',
+  smartBrainServer:
+    'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741852590/smart-brain-server_b6ytt7.png',
 };
 
 export default images;
