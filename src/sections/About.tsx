@@ -17,6 +17,7 @@ import TypeScriptIcon from '@/assets/icons/typescript.svg';
 import NextJsIcon from '@/assets/icons/nextjs.svg';
 import JavaIcon from '@/assets/icons/java.svg';
 import SpringBootIcon from '@/assets/icons/spring-boot.svg';
+import NodeJsIcon from '@/assets/icons/nodejs.svg';
 
 import { CardHeader } from '@/components/CardHeader';
 import { ToolBoxItems } from '@/components/ToolboxItems';
@@ -57,6 +58,10 @@ const toolBoxItems = [
   {
     title: 'Spring Boot',
     iconType: SpringBootIcon,
+  },
+  {
+    title: 'NodeJS',
+    iconType: NodeJsIcon,
   },
 ];
 
