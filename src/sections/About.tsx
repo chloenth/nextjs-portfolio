@@ -63,6 +63,10 @@ const toolBoxItems = [
     title: 'NodeJS',
     iconType: NodeJsIcon,
   },
+  {
+    title: 'NodeJS',
+    iconType: NodeJsIcon,
+  },
 ];
 
 const hobbies = [

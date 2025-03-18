@@ -29,6 +29,8 @@ const images = {
     'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741846337/smart-brain_b3c08i.png',
   smartBrainServer:
     'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741852590/smart-brain-server_b6ytt7.png',
+  hospitalManagementSystem:
+    'https://res.cloudinary.com/dwhrce3xa/image/upload/v1741940344/hospital-management-system_oijchm.png',
 };
 
 export default images;

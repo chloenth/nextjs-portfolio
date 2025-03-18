@@ -12,14 +12,12 @@ const portfolioProjects = [
     year: '2024',
     title: 'Smart Brain',
     results: [
-      { title: 'A platform for effortless face detection!' },
+      { title: 'Effortless face detection platform.' },
       {
-        title:
-          'With a secure login and signup system, your data remains protected.',
+        title: 'Secure login and signup system.',
       },
       {
-        title:
-          'PostgreSQL database integration and Node.js backend ensure efficient storage and retrieval of user information, including tracking the number of image submissions for face detection',
+        title: 'Connects to backend via API calls using Axios.',
       },
     ],
     link: 'https://smart-brain-zfvm.onrender.com',
@@ -34,7 +32,7 @@ const portfolioProjects = [
     results: [
       {
         title:
-          'The Smart Brain Server acts as the backbone of the Smart Brain application, providing the necessary API endpoints to handle requests and responses of the application.',
+          'Acts as the backbone of the Smart Brain application, providing the necessary API endpoints to handle requests and responses of the application.',
       },
       { title: 'Face Detection with Clarifai Model' },
       { title: 'Connect to PostgreSQL Database' },
@@ -49,17 +47,70 @@ const portfolioProjects = [
     techs: ['NodeJS', 'Restful API', 'AI-Clarifai Model', 'Postgresql'],
   },
   {
-    company: 'Quantum Dynamics',
-    year: '2023',
-    title: 'AI Startup Landing Page',
+    company: 'Personal project',
+    year: '2025',
+    title: 'Hospital Management System',
     results: [
-      { title: 'Enhanced user experience by 40%' },
-      { title: 'Improved site speed by 50%' },
-      { title: 'Increased mobile traffic by 35%' },
+      {
+        title: 'Admin dashboard with user management.',
+      },
+      {
+        title: 'Supports search, sorting, and pagination.',
+      },
+      {
+        title:
+          'Secure API token handling in cookies with automatic refresh on expiration.',
+      },
     ],
-    link: 'https://youtu.be/Z7I5uSRHMHg',
-    image: images.aiStartupLandingPage,
-    techs: ['react', 'tachyons'],
+    link: 'https://drive.google.com/file/d/1KOmIC2X9tUOs_0OwH_57AYTrvr4K2cW_/view',
+    sourceCode: 'https://github.com/chloenth/hospital-management-system',
+    image: images.hospitalManagementSystem,
+    techs: ['React', 'React Router', 'Tailwind CSS', 'Shadcn/UI'],
+  },
+  {
+    company: 'Personal project',
+    year: '2025',
+    title: 'Mycare Portal',
+    results: [
+      {
+        title:
+          'Backend for a Hospital Management System using microservice architecture.',
+      },
+      {
+        title:
+          'API Gateway handles client requests, while identity, profile, and search microservices manage authentication, user data, and fast search.',
+      },
+      {
+        title:
+          'The identity microservice handles authentication using access and refresh tokens, storing them in httpOnly cookies for security and sending them back to the client.',
+      },
+      {
+        title:
+          'PostgreSQL and Elasticsearch ensure secure storage and high-performance search.',
+      },
+      {
+        title:
+          'Kafka listens for user creation and updates from the identity microservice and profile microservice, synchronizing data with the search service.',
+      },
+      {
+        title:
+          'Redis caches logged-in user information in the search microservice for faster access.',
+      },
+      {
+        title:
+          'This setup ensures real-time updates, efficiency, and scalability.',
+      },
+    ],
+    sourceCode: 'https://github.com/chloenth/mycare-portal',
+    techs: [
+      'Spring Boot',
+      'Spring Security',
+      'Elastic Search',
+      'Redis',
+      'Kafka',
+      'Postgresql',
+      'Microservice Architecture',
+    ],
   },
 ];
 
@@ -83,7 +134,11 @@ export const ProjectsSection = () => {
               className='px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20'
             >
               {/* Grid layout on lg screen - Project Card */}
-              <div className='lg:grid lg:grid-cols-2 lg:gap-16'>
+              <div
+                className={`lg:grid ${
+                  project.image && 'lg:grid-cols-2'
+                } lg:gap-16`}
+              >
                 {/* First column of Grid layout on lg screen - Project Card */}
                 <div className='lg:pb-16'>
                   {/* Project Info - Project Card */}
@@ -124,13 +179,19 @@ export const ProjectsSection = () => {
                     ))}
                   </ul>
 
-                  <div className='flex flex-col md:flex-row md:gap-8 lg:gap-0 lg:flex-col'>
-                    <a href={project.link} target='_blank'>
-                      <button className='bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8'>
-                        <span>Visit Live Site</span>
-                        <ArrowUpRightIcon className='size-4' />
-                      </button>
-                    </a>
+                  <div
+                    className={`flex flex-col md:flex-row md:gap-8 ${
+                      project.image && 'lg:gap-0 lg:flex-col'
+                    }`}
+                  >
+                    {project.link && (
+                      <a href={project.link} target='_blank'>
+                        <button className='bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8'>
+                          <span>View Demo</span>
+                          <ArrowUpRightIcon className='size-4' />
+                        </button>
+                      </a>
+                    )}
 
                     <a href={project.sourceCode} target='_blank'>
                       <button className='border border-white/20 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8'>
@@ -142,13 +203,17 @@ export const ProjectsSection = () => {
                 </div>
 
                 {/* Second column of Grid layout on lg screen - Project Card */}
-                <div className='relative'>
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className='mt-8 -mb-4 md:mb-0 lg:mt-0 lg:absolute w-full h-auto lg:w-[800px] lg:h-full lg:object-cover lg:object-center rounded-xl lg:max-w-none'
-                  />
-                </div>
+                {project.image && (
+                  <div className='relative'>
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={820}
+                      height={820}
+                      className='mt-8 -mb-4 md:mb-0 lg:mt-0 lg:absolute lg:top-1/2 lg:-translate-y-1/2 w-full h-auto lg:w-[800px] lg:object-cover lg:object-center rounded-xl lg:max-w-none'
+                    />
+                  </div>
+                )}
               </div>
             </Card>
           ))}
