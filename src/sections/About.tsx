@@ -18,6 +18,7 @@ import NextJsIcon from '@/assets/icons/nextjs.svg';
 import JavaIcon from '@/assets/icons/java.svg';
 import SpringBootIcon from '@/assets/icons/spring-boot.svg';
 import NodeJsIcon from '@/assets/icons/nodejs.svg';
+import DockerIcon from '@/assets/icons/docker.svg';
 
 import { CardHeader } from '@/components/CardHeader';
 import { ToolBoxItems } from '@/components/ToolboxItems';
@@ -64,8 +65,8 @@ const toolBoxItems = [
     iconType: NodeJsIcon,
   },
   {
-    title: 'NodeJS',
-    iconType: NodeJsIcon,
+    title: 'Docker',
+    iconType: DockerIcon,
   },
 ];
 
