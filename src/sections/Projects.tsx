@@ -9,47 +9,45 @@ import { Card } from '@/components/Card';
 const portfolioProjects = [
   {
     company: 'Personal project',
-    year: '2024',
-    title: 'Smart Brain',
+    year: '2025',
+    title: 'Chat App - Full-stack',
     results: [
-      { title: 'Effortless face detection platform.' },
+      { title: 'Real-time messaging with Socket.IO.' },
       {
-        title: 'Secure login and signup system.',
+        title: 'User authentication (JWT-based, stored in http-only cookies).',
       },
       {
-        title: 'Connects to backend via API calls using Axios.',
+        title: 'Online/offline status tracking.',
+      },
+      {
+        title: 'Profile management with Cloudinary image upload.',
+      },
+      {
+        title: 'Responsive UI with TailwindCSS & DaisyUI.',
       },
     ],
-    link: 'https://smart-brain-zfvm.onrender.com',
-    sourceCode: 'https://github.com/chloenth/smart-brain',
-    image: images.smartBrainProject,
-    techs: ['React', 'Tachyons'],
-  },
-  {
-    company: 'Personal project',
-    year: '2024',
-    title: 'Smart Brain Server',
-    results: [
-      {
-        title:
-          'Acts as the backbone of the Smart Brain application, providing the necessary API endpoints to handle requests and responses of the application.',
-      },
-      { title: 'Face Detection with Clarifai Model' },
-      { title: 'Connect to PostgreSQL Database' },
-      {
-        title:
-          'Manage User Authentication and Registration with the database integration',
-      },
+    link: 'https://chat-app-b5c4.onrender.com',
+    sourceCode: 'https://github.com/chloenth/chat-app',
+    image: images.chatApp,
+    techs: [
+      'React (Vite)',
+      'Zustand (for state management)',
+      'Axios',
+      'TailwindCSS & DaisyUI',
+      'React Router',
+      'Socket.IO Client',
+      'Node.js (Express.js)',
+      'Socket.IO',
+      'MongoDB Atlas & Mongoose',
+      'Cloudinary (for profile image uploads)',
+      'JWT Authentication (http-only cookies)',
+      'Multer (for handling file uploads)',
     ],
-    link: 'https://smart-brain-server-fgrv.onrender.com',
-    sourceCode: 'https://github.com/chloenth/smart-brain-server',
-    image: images.smartBrainServer,
-    techs: ['NodeJS', 'Restful API', 'AI-Clarifai Model', 'Postgresql'],
   },
   {
     company: 'Personal project',
     year: '2025',
-    title: 'Hospital Management System',
+    title: 'Hospital Management System - Frontend',
     results: [
       {
         title: 'Admin dashboard with user management.',
@@ -70,7 +68,7 @@ const portfolioProjects = [
   {
     company: 'Personal project',
     year: '2025',
-    title: 'Mycare Portal',
+    title: 'Mycare Portal - Backend',
     results: [
       {
         title:
@@ -134,13 +132,9 @@ export const ProjectsSection = () => {
               className='px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20'
             >
               {/* Grid layout on lg screen - Project Card */}
-              <div
-                className={`lg:grid ${
-                  project.image && 'lg:grid-cols-2'
-                } lg:gap-16`}
-              >
+              <div>
                 {/* First column of Grid layout on lg screen - Project Card */}
-                <div className='lg:pb-16'>
+                <div className='lg:pb-10'>
                   {/* Project Info - Project Card */}
                   <div className='bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text inline-flex gap-2 font-bold uppercase tracking-widest text-sm'>
                     <span>{project.company}</span>
@@ -179,11 +173,7 @@ export const ProjectsSection = () => {
                     ))}
                   </ul>
 
-                  <div
-                    className={`flex flex-col md:flex-row md:gap-8 ${
-                      project.image && 'lg:gap-0 lg:flex-col'
-                    }`}
-                  >
+                  <div className='flex flex-col md:flex-row md:gap-8 lg:justify-between'>
                     {project.link && (
                       <a href={project.link} target='_blank'>
                         <button className='bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8'>
@@ -210,7 +200,7 @@ export const ProjectsSection = () => {
                       alt={project.title}
                       width={820}
                       height={820}
-                      className='mt-8 -mb-4 md:mb-0 lg:mt-0 lg:absolute lg:top-1/2 lg:-translate-y-1/2 w-full h-auto lg:w-[800px] lg:object-cover lg:object-center rounded-xl lg:max-w-none'
+                      className='mt-8 -mb-4 md:-mb-20 lg:mt-0  w-full  lg:object-cover rounded-xl'
                     />
                   </div>
                 )}
