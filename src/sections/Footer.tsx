@@ -5,10 +5,10 @@ const footerLinks = [
     title: 'Github',
     href: 'https://github.com/chloenth',
   },
-  {
-    title: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/chloenth',
-  },
+  // {
+  //   title: 'LinkedIn',
+  //   href: 'https://www.linkedin.com/in/chloenth',
+  // },
 ];
 
 export const Footer = () => {
