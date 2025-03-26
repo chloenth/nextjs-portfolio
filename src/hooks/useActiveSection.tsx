@@ -1,17 +1,17 @@
 // hooks/useActiveSection.js
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const useActiveSection = () => {
   const [activeSection, setActiveSection] = useState('home');
-  let scrollTimeout: NodeJS.Timeout | null = null;
+  const scrollTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       // Clear the previous timeout to reset the delay
-      if (scrollTimeout) clearTimeout(scrollTimeout);
+      if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
 
       // Wait 50ms after scrolling stops to update the active section
-      scrollTimeout = setTimeout(() => {
+      scrollTimeout.current = setTimeout(() => {
         const sections = document.querySelectorAll('section');
 
         let newActiveSection = activeSection; // Keep track of the latest active section
@@ -40,7 +40,7 @@ const useActiveSection = () => {
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      if (scrollTimeout) clearTimeout(scrollTimeout);
+      if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
     };
   }, [activeSection]);
 
